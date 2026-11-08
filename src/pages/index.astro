@@ -5,20 +5,60 @@ import BaseLayout from "../layouts/baselayout.astro";
 <BaseLayout pageTitle="Empire Gaming Organization">
     <div class="scrollingbar">
         <div class="scrollingbartrack">
-            <span>All games · All people · One EMPIRE · All games · All people · One EMPIRE ·</span>
-            <span aria-hidden="true">All games · All people · One EMPIRE · All games · All people · One EMPIRE ·</span>
+            <span
+                >All games · All people · One EMPIRE · All games · All people ·
+                One EMPIRE ·</span
+            >
+            <span aria-hidden="true"
+                >All games · All people · One EMPIRE · All games · All people ·
+                One EMPIRE ·</span
+            >
         </div>
     </div>
     <main class="main-content">
-        <section class="main-topofpage">
-            <h1 class="main-headline">
-                <span style="color: blue">Play</span><br />
-                <span style="color:#f5b041;">Compete</span><br />
-                <span style="color: green">Learn</span><br />
-            </h1>
-            <p class="belowindexwelcomeslogan">
-                Building Communities and training players since 2026
-            </p>
-        </section>
+        <div class="hero-layout">
+            <div class="hero-backdrop" aria-hidden="true"></div>
+            <div class="hero-text">
+                <h1 class="main-headline">
+                    <span style="color: rgb(47, 47, 190)">Play</span>
+                    <span style="color:#f5b041;">Compete</span>
+                    <span style="color: rgb(46, 175, 46)">Learn</span>
+                </h1>
+                <p class="belowindexwelcomeslogan">
+                    Building Communities and training players since 2026
+                </p>
+            </div>s
+
+            <div class="hero-eyes" id="hero-eyes" aria-hidden="true">
+                <div class="eye">
+                    <div class="pupil"></div>
+                </div>
+                <div class="eye">
+                    <div class="pupil"></div>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <script>
+        const eyes = document.getElementById("hero-eyes");
+        const pupils = eyes?.querySelectorAll(".pupil");
+
+        document.addEventListener("pointermove", (event) => {
+            pupils?.forEach((pupil) => {
+                const eye = pupil.parentElement;
+                if (!eye) return;
+
+                const bounds = eye.getBoundingClientRect();
+                const maxX = (bounds.width - pupil.clientWidth) / 2;
+                const maxY = (bounds.height - pupil.clientHeight) / 2;
+                const deltaX = event.clientX - (bounds.left + bounds.width / 2);
+                const deltaY = event.clientY - (bounds.top + bounds.height / 2);
+                const distance = Math.hypot(deltaX / maxX, deltaY / maxY);
+                const scale = distance > 1 ? 1 / distance : 1;
+
+                pupil.style.transform = `translate(${deltaX * scale}px, ${deltaY * scale}px)`;
+            });
+        });
+    </script>
 </BaseLayout>
