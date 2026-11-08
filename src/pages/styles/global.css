@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topbar {
+    padding: 12px 28px;
+    background-color: #010107;
+    border-bottom: 2px solid #444;
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+
+}
+
+.brand-logo:hover {
+    transform: scale(1.1);
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.gamesbtn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 4px;
+}
+
+.aboutbtn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 4px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 160px;
+    padding: 6px;
+    background-color: #1b1b24;
+    border: 1px solid #444;
+    border-radius: 8px;
+    z-index: 10;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.main-content {
+    min-height: 70vh;
+    /* 1. takes up most of the screen */
+    display: flex;
+    /* 2. flex column to stack + center */
+    flex-direction: column;
+    justify-content: center;
+    /*    vertical centering */
+    gap: 10px;
+    /*    space between h1 and slogan */
+    padding: 40px 28px;
+    /* 3. guarantees space from navbar */
+    ;
+}
+
+.main-content h1 {
+    font-size: 2.5rem, 7vw, 5rem;
+    line-height: 1.1;
+}
+
+.slogan {
+    font-size: 1.1rem, 7vw, 5rem;
+}
+
+body {
+    background-color: #000000;
+    color: #fff;
+}
+
+.about {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 40px 28px;
+}
