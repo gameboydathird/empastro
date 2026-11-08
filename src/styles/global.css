@@ -157,26 +157,33 @@ body {
 
 .scrollingbar {
     width: 100%;
-    background-color: #f5b041; /* The gold/yellow color */
-    color: #000000;            /* Black text for high contrast */
+    background-color: #f5b041;
+    /* The gold/yellow color */
+    color: #000000;
+    /* Black text for high contrast */
     font-family: "Space Mono", monospace;
     font-weight: 700;
     text-transform: uppercase;
     padding: 12px 0;
-    overflow: hidden;          /* Hides the text that goes off-screen */
-    white-space: nowrap;       /* Forces the text to stay on one line */
+    overflow: hidden;
+    /* Hides the text that goes off-screen */
+    white-space: nowrap;
+    /* Forces the text to stay on one line */
 }
 
 .scrollingbartrack {
     display: flex;
-    width: max-content;          /* Ensures the track is only as wide as its content */
-    animation:scroll-text 20s linear infinite; /* Adjust the duration as needed */
+    width: max-content;
+    /* Ensures the track is only as wide as its content */
+    animation: scroll-text 20s linear infinite;
+    /* Adjust the duration as needed */
 }
 
 @keyframes scroll-text {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -245,18 +252,54 @@ body {
 
 @media (max-width: 900px) {
     .hero-layout {
-        flex-direction: column-reverse; /* Stacks model above text on mobile */
+        flex-direction: column-reverse;
+        /* Stacks model above text on mobile */
         text-align: center;
         gap: 60px;
         min-height: 0;
     }
+
     .main-headline {
-        align-items: center !important; /* Centers text on mobile */
+        align-items: center !important;
+        /* Centers text on mobile */
     }
+
     .hero-eyes {
         flex: none;
         padding-top: 20px;
     }
+}
+
+.cs2-content {
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 10%;
+    align-items: center;
+}
+
+.cs2-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.cs2imgbox,
+cs2topofpage {
+    flex: 1;
+    min-width: 0;
+}
+
+.cs2imgbox img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #444;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: block;
 }
 
 .cs2topofpage {
@@ -265,4 +308,46 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 10px;
+}
+
+.cs2topofpage h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    color: #eeca00;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+}
+
+.cs2slogan {
+    font-family: "Space Mono", monospace;
+    font-size: 1.1rem;
+    color: #2436d6;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .cs2-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cs2topofpage {
+        align-items: center;
+    }
+}
+
+.playerlist {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    max-width: 800px; 
+    padding: 40px 10%;
+    text-align: left;
+}
+
+.playerlist h2{
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: bold;
+    color: #eeca00;
 }
