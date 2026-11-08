@@ -42,7 +42,7 @@ import BaseLayout from "../layouts/baselayout.astro";
 
     <script>
         const eyes = document.getElementById("hero-eyes");
-        const pupils = eyes?.querySelectorAll(".pupil");
+        const pupils = eyes?.querySelectorAll<HTMLElement>(".pupil");
 
         document.addEventListener("pointermove", (event) => {
             pupils?.forEach((pupil) => {
