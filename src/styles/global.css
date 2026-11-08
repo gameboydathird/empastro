@@ -5,11 +5,12 @@
 }
 
 .topbar {
-    padding: 12px 28px;
-    background-color: #010107;
-    border-bottom: 2px solid #444;
+    padding: 12px 10%;
+    background-color: #000000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .brand {
@@ -101,23 +102,17 @@
 }
 
 .main-content {
-    min-height: 70vh;
+    min-height: 100vh;
     /* 1. takes up most of the screen */
     display: flex;
     /* 2. flex column to stack + center */
     flex-direction: column;
     justify-content: center;
     /*    vertical centering */
-    gap: 10px;
     /*    space between h1 and slogan */
-    padding: 40px 28px;
+    padding: 40px 8lvw;
     /* 3. guarantees space from navbar */
-    ;
-}
-
-.main-content h1 {
-    font-size: 2.5rem, 7vw, 5rem;
-    line-height: 1.1;
+    align-items: flex-start;
 }
 
 .slogan {
@@ -136,4 +131,33 @@ body {
     justify-content: center;
     gap: 5px;
     padding: 40px 28px;
+}
+
+.maineyebrow {
+    font-family: "Space Mono", monospace;
+    color: #fffb00;
+    font-size: 0.9rem;
+    letter-spacing: 0.23rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main-headline {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-family: 'Anton', sans-serif; /* The condensed, heavy font */
+    font-size: clamp(5rem, 12vw, 10rem); /* HUGE on desktop, shrinks on mobile */
+    line-height: 0.85;          /* Crushes the lines together */
+    margin: 0;                  /* Removes default browser margins */
+    text-transform: uppercase;  /* Makes sure it's always ALL CAPS */
+    color: #ffffff;
+}
+
+.belowindexwelcomeslogan {
+    font-family: system-ui, sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    max-width: 600px;
+    line-height: 1.6;
 }
