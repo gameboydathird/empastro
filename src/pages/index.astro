@@ -3,15 +3,22 @@ import BaseLayout from "../layouts/baselayout.astro";
 ---
 
 <BaseLayout pageTitle="Empire Gaming Organization">
+    <div class="scrollingbar">
+        <div class="scrollingbartrack">
+            <span>All games · All people · One EMPIRE · All games · All people · One EMPIRE ·</span>
+            <span aria-hidden="true">All games · All people · One EMPIRE · All games · All people · One EMPIRE ·</span>
+        </div>
+    </div>
     <main class="main-content">
         <section class="main-topofpage">
-            <p class="maineyebrow">Empire Gaming Organization</p>
             <h1 class="main-headline">
-                <span>Play</span><br>
-                <span>Compete</span><br>
-                <span>Learn</span><br>
+                <span style="color: blue">Play</span><br />
+                <span style="color:#f5b041;">Compete</span><br />
+                <span style="color: green">Learn</span><br />
             </h1>
-            <p class="belowindexwelcomeslogan">Building Communities and training players since 2026</p>
+            <p class="belowindexwelcomeslogan">
+                Building Communities and training players since 2026
+            </p>
         </section>
     </main>
 </BaseLayout>
