@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+
+const { pageTitle = "Empire Gaming Organization" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <nav class="topbar">
+      <a href="/" class="brand">
+        <img src="public/pics/EMPIRE.png" alt="Empire Gaming" class="brand-logo" />
+        <span class="brand-name">Empire Gaming</span>
+      </a>
+      <div class="nav-links">
+        <div class="dropdown">
+          <a href="/games" class="gamesbtn">Games</a>
+          <div class="dropdown-menu">
+            <a href="/cs2">CS2</a>
+            <a href="/valorant">Valorant</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <slot />
+  </body>
+</html>
