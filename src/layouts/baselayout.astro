@@ -1,32 +1,38 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 const { pageTitle = "Empire Gaming Organization" } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <nav class="topbar">
-      <a href="/" class="brand">
-        <img src="public/pics/EMPIRE.png" alt="Empire Gaming" class="brand-logo" />
-        <span class="brand-name">Empire Gaming</span>
-      </a>
-      <div class="nav-links">
-        <div class="dropdown">
-          <a href="/games" class="gamesbtn">Games</a>
-          <div class="dropdown-menu">
-            <a href="/cs2">CS2</a>
-            <a href="/valorant">Valorant</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <slot />
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{pageTitle}</title>
+    </head>
+    <body>
+        <nav class="topbar">
+            <!-- Add /empastro/ to the home link -->
+            <a href="/empastro/" class="brand">
+                <!-- Add /empastro/ to the image path -->
+                <img
+                    src="/empastro/pics/EMPIRE.png"
+                    alt="Empire Gaming"
+                    class="brand-logo"
+                />
+                <span class="brand-name">Empire Gaming</span>
+            </a>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="/empastro/games" class="gamesbtn">Games</a>
+                    <div class="dropdown-menu">
+                        <!-- Add /empastro/ to the dropdown links -->
+                        <a href="/empastro/cs2">CS2</a>
+                        <a href="/empastro/valorant">Valorant</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <slot />
+    </body>
 </html>
