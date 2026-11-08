@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://gameboydathird.github.io',
-  base: '/empastro',
+  site: 'https://empiregamingorg.dpdns.org',
+  // base is intentionally removed
 });
