@@ -339,13 +339,13 @@ cs2topofpage {
 .playerlist {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
-    max-width: 800px; 
+    align-items: flex-start;
+    max-width: 800px;
     padding: 40px 10%;
     text-align: left;
 }
 
-.playerlist h2{
+.playerlist h2 {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: bold;
     color: #eeca00;

@@ -41,7 +41,7 @@ import BaseLayout from "../layouts/baselayout.astro";
     </main>
 
     <script>
-import { e164 } from "astro:schema";
+        import { e164 } from "astro:schema";
 
         const eyes = document.getElementById("hero-eyes");
         const pupils = eyes?.querySelectorAll<HTMLElement>(".pupil");
@@ -60,7 +60,7 @@ import { e164 } from "astro:schema";
                 const scale = distance > 1 ? 1 / distance : 1;
 
                 pupil.style.transform = `translate(${deltaX * scale}px, ${deltaY * scale}px)`;
-            })
+            });
         });
     </script>
 </BaseLayout>

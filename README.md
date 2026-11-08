@@ -61,6 +61,7 @@ This project was built from the ground up using modern web standards:
 If you want to clone this repository and run the source code on your own machine, follow these steps:
 
 **1. Clone the repository:**
+
 ```bash
 git clone https://github.com/gameboydathird/empastro.git
 cd empastro
