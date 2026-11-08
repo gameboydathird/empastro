@@ -265,8 +265,7 @@ body {
     }
 
     .hero-eyes {
-        flex: none;
-        padding-top: 20px;
+        display: none;
     }
 }
 
