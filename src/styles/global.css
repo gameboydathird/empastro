@@ -126,9 +126,11 @@ body {
     min-height: 70vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: baseline;
+    
     gap: 5px;
     padding: 40px 28px;
+    align-items: center;
 }
 
 .main-headline {
@@ -453,3 +455,4 @@ cs2topofpage {
     margin: 0;
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
+
