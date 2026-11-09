@@ -349,4 +349,5 @@ cs2topofpage {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: bold;
     color: #eeca00;
+    font-family: 'Anton', sans-serif;
 }
