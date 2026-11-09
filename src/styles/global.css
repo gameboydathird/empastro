@@ -351,3 +351,16 @@ cs2topofpage {
     color: #eeca00;
     font-family: 'Anton', sans-serif;
 }
+
+.cs2players {
+    font-family: "Anton", sans-serif;
+    padding: 25px;
+    margin: 0;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.cs2p1 {
+    color: #24d683;
+    text-decoration: none;
+
+}
