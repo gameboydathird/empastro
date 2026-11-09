@@ -270,10 +270,10 @@ body {
 }
 
 .cs2-content {
-    flex: 1 0 auto;
+    min-height: 0;
     display: flex;
     justify-content: center;
-    padding: 20px 10%;
+    padding: 40px 10%;
     align-items: center;
 }
 
@@ -286,14 +286,15 @@ body {
 }
 
 .cs2imgbox,
-.cs2topofpage {
+cs2topofpage {
     flex: 1;
     min-width: 0;
 }
 
 .cs2imgbox img {
     width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
     border-radius: 12px;
     border: 2px solid #444;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -330,12 +331,6 @@ body {
         text-align: center;
     }
 
-    .cs2imgbox,
-    .cs2topofpage {
-        flex: initial;
-        width: 100%;
-    }
-
     .cs2topofpage {
         align-items: center;
     }
@@ -346,7 +341,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     max-width: 800px;
-    padding: 20px 10%;
+    padding: 40px 10%;
     text-align: left;
 }
 
