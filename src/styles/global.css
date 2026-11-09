@@ -362,5 +362,94 @@ cs2topofpage {
 .cs2p1 {
     color: #24d683;
     text-decoration: none;
+}
 
+.valorant-content {
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 10%;
+    align-items: center;
+}
+
+.valorant-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.valorantimgbox,
+cs2topofpage {
+    flex: 1;
+    min-width: 0;
+}
+
+.valorantimgbox img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #444;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.valoranttopofpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.valoranttopofpage h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    color: #eeca00;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+}
+
+.valorantslogan {
+    font-family: "Space Mono", monospace;
+    font-size: 1.1rem;
+    color: #24d683;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .valorant-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .valorantopofpage {
+        align-items: center;
+    }
+}
+
+.playerlist {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 800px;
+    padding: 40px 10%;
+    text-align: left;
+}
+
+.playerlist h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: bold;
+    color: #eeca00;
+    font-family: 'Anton', sans-serif;
+}
+
+.valorantplayers {
+    font-family: "Anton", sans-serif;
+    padding: 25px;
+    margin: 0;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
