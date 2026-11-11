@@ -123,7 +123,6 @@ body {
 }
 
 .about {
-    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: baseline;
@@ -456,3 +455,37 @@ cs2topofpage {
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
+.socialbtn {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: -20px;
+    justify-content: center;
+}
+
+.scbtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffff;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.scbtn:hover {
+    transform: translate(-3px);
+}
+
+.dcscbtn {
+    background-color: #5865F2;
+}
+
+.wtsapscbtn {
+    background-color: #25d365c7;
+}
